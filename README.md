@@ -1,5 +1,5 @@
 # ESP-01S-GPIO4
-ESP-01S Non-Glitch modification for Driving Relay Modules.
+ESP-01S Non-Glitch modification for Driving ESP-01S Relay Modules.
 
 This shows to properly modify an ESP-01S module such that when used with its associated single Relay module it prevents the relay activating during start up initialization.
 
@@ -23,8 +23,13 @@ Then wrap the strand around the base of header pin 4 and solder into place.
 
 ![BoardMod Top](https://github.com/user-attachments/assets/0d163eb5-c0b8-4b34-87c5-04ebe924fa2f)
 
-For the relay module, you just need to cut a single track and reroute the relay drive signal from the GPIO0 header pin
-to the new GPIO4 header pin (previously used for module EN).
+For the ESP-01S relay module
+![Relay Board V1 0](https://github.com/user-attachments/assets/072ebc8c-b389-4cd7-81b3-06e3f20cd0a4)
+
+you just need to cut a single track and reroute the relay drive signal from the GPIO0 header pin
+to the new GPIO4 header pin (previously used for the module EN signal).
+![BoardMod Bottom](https://github.com/user-attachments/assets/f6e23973-5aaf-45d4-bc57-3d58b1a15b83)
+
 
 Now for your Arduino code, simply change the relay output signal pin used from 0 (GPIO0) to 4 (GPIO4).
 
